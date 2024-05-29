@@ -1,5 +1,6 @@
 ---
 const commitID = import.meta.env.VITE_COMMIT_ID;
+const commitURL = import.meta.env.VITE_COMMIT_URL;
 ---
 
 <footer class='mx-auto mt-24 w-full'>
@@ -17,7 +18,7 @@ const commitID = import.meta.env.VITE_COMMIT_ID;
           class='inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600'
           href='/privacy'>Privacy</a
         > -->
-				<p class=''>© 2024 realSunyz. All rights reserved. Build {commitID}.</p>
+				<p class=''>© 2024 realSunyz. All rights reserved. Build <a href="{commitUrl}">{commitID}</a>.</p>
 			</div>
 
 			<div class='flex items-center justify-between'>
