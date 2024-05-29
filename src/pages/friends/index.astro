@@ -1,50 +1,44 @@
 ---
 import PageLayout from '@/layouts/BaseLayout.astro'
-import ToolSection from '@/components/ToolSection.astro'
+import LinkSection from '@/components/LinkSection.astro'
 import Button from '@/components/Button.astro'
 
 const Group1 = [
 	{
 		name: 'TaranakiNeko',
 		description: 'A cat lying on the keyboard.',
-		href: 'https://blog.nekoq.top/',
-		iconPath: 'blank',
-		iconBgColour: '#000001'
+		href: 'https://nekoq.top/',
+		imgPath: 'https://cdn.sunyz.net/friends/taranakineko.webp'
 	},
 	{
 		name: 'Winslow',
 		description: 'Tengu Youkai.',
 		href: 'https://winsloweric.com/',
-		iconPath: 'blank',
-		iconBgColour: '#000001'
+		imgPath: 'https://cdn.sunyz.net/friends/winslow.webp'
 	},
 	{
 		name: 'Jackie',
-		description: 'cat.',
+		description: 'A cat\'s nest.',
 		href: 'https://jackiecat.top/',
-		iconPath: 'blank',
-		iconBgColour: '#000001'
+		imgPath: 'https://cdn.sunyz.net/friends/jackie.webp'
 	},
 	{
 		name: 'huige',
 		description: 'Everyone can be the light in the darkness.',
 		href: 'https://huige233.com',
-		iconPath: 'blank',
-		iconBgColour: '#000001'
-	},
-	{
-		name: 'Souiken',
-		description: 'Wishing we get through this long dark night, we can still see the sunrise.',
-		href: 'https://souiken.moe/',
-		iconPath: 'blank',
-		iconBgColour: '#000001'
+		imgPath: 'https://cdn.sunyz.net/friends/huige.webp'
 	},
 	{
 		name: 'Clansty',
-		description: 'aka. 0w.',
+		description: 'Developer of Q2TG and Icalingua++.',
 		href: 'https://0w.al/',
-		iconPath: 'blank',
-		iconBgColour: '#000001'
+		imgPath: 'https://cdn.sunyz.net/friends/clansty.webp'
+	},
+	{
+		name: 'Souiken',
+		description: 'May we still see the rising sun after enduring this long night.',
+		href: 'https://souiken.moe/',
+		imgPath: 'https://cdn.sunyz.net/friends/souiken.webp'
 	},
 ]
 
@@ -71,9 +65,9 @@ const Group1 = [
 		<div class='mt-5 flex w-full flex-col gap-y-10'>
 			<div>
 				<h1 class='mb-1 text-2xl font-bold'>Friends</h1>
-				<p>are below</p>
+				<p>listed in no particular order</p>
 			</div>
-			<ToolSection title='test' tools={Group1} />
+			<LinkSection title='take a glance?' links={Group1} />
 		</div>
 	</div>
 </PageLayout>
