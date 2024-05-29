@@ -9,6 +9,7 @@ import expressiveCode from 'astro-expressive-code';
 import { expressiveCodeOptions } from './src/site.config';
 import icon from 'astro-icon';
 
+// adapter
 import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
