@@ -30,6 +30,10 @@ export default defineConfig({
       }
     }
   },
+  image: {
+    domains: ["cdn.sunyz.net"],
+    remotePatterns: [{ protocol: "https" }],
+  },
   prefetch: true,
   output: 'server',
   adapter: cloudflare()

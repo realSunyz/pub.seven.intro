@@ -7,29 +7,24 @@ import Label from '../components/Label.astro'
 import SkillLayout from '../components/SkillLayout.astro'
 // import PostPreview from '@/components/blog/PostPreview.astro'
 
-import { Image } from 'astro:assets'
-import avatar from '../assets/avatar.png'
+// import { Image } from 'astro:assets'
+// import avatar from '../assets/avatar.png'
 
-import { getAllPosts, sortMDByDate } from '@/utils'
+// import { getAllPosts, sortMDByDate } from '@/utils'
 
 const languages = ['Mandarin Chinese', 'English', 'French (learning)']
 const programming = ['C++', 'Python', 'Bash', 'HTML', 'LATEX']
 const softwares = ['AI', 'PR', 'PS', 'XD', 'FCP', 'VS Code']
 
-const MAX_POSTS = 10
-const allPosts = await getAllPosts()
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
+// const MAX_POSTS = 10
+// const allPosts = await getAllPosts()
+// const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
-			<Image
-				src={avatar}
-				alt='profile photo'
-				class='h-28 w-auto rounded-full bg-[#FFBE98] p-2'
-				loading='eager'
-			/>
+			<img src="https://cdn.sunyz.net/avatar.png" alt="Avatar" class='h-28 w-auto rounded-full bg-[#FFBE98] p-2' loading='eager'/>
 
 			<div class='flex flex-col items-center gap-y-4'>
 				<h1 class='text-3xl font-bold'>Seven SUN</h1>
@@ -88,8 +83,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				heading='Central China Normal University Overseas Study Services Centre'
 				subheading='Secondary School'
 				date='Sep 2023 - Jun 2026'
-				imagePath='/src/assets/ccnu.png'
-				altText='Lorem, ipsum dolor sit'
+				imagePath='https://cdn.sunyz.net/assets/ccnu.png'
+				altText='Central China Normal University'
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
@@ -105,7 +100,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				heading='CompTIA IT Fundamentals'
 				subheading='The CompTIA IT Fundamentals (ITF+) exam focuses on the knowledge and skills required to identify and explain the basics of computing, IT infrastructure, software development and database use.'
 				date='October, 2023'
-				imagePath='/src/assets/comptia-itf.png'
+				imagePath='https://cdn.sunyz.net/assets/comptia-itf.png'
 				altText='CompTIA ITF+ Certified'
 				imageClass='h-11 w-auto md:-left-16'
 				href='https://www.comptia.org/certifications/it-fundamentals'
