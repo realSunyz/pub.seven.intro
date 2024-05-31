@@ -52,6 +52,9 @@ const Group1 = [
 		href: 'https://0w.al/',
 		imgPath: 'https://cdn.sunyz.net/friends/clansty.webp'
 	},
+]
+
+const Group2 = [
 	{
 		name: 'Souiken',
 		description: 'May we still see the rising sun after enduring this long night.',
@@ -59,19 +62,19 @@ const Group1 = [
 		imgPath: 'https://cdn.sunyz.net/friends/souiken.webp'
 	},
 	{
+		name: 'Tenshi Sekunavi',
+		description: 'Not saddened by self losses. Turn jealousy and envy into worship.',
+		href: 'https://ltyec.com/',
+		imgPath: 'https://cdn.sunyz.net/friends/tenshi.webp'
+	},
+	{
 		name: 'SSR',
 		description: 'And one day we\'ll look back at where we started and be amazed by how far we\'ve come.',
 		href: 'https://leanhe.dev/',
 		imgPath: 'https://cdn.sunyz.net/friends/ssr.webp'
 	},
-	{
-		name: 'Tenshi Sekunavi',
-		description: 'It would be much better if jealousy could be transformed into admiration.',
-		href: 'https://ltyec.com/',
-		imgPath: 'https://cdn.sunyz.net/friends/tenshi.webp'
-	},
-]
 
+]
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -90,7 +93,7 @@ const Group1 = [
 				>
 				</path>
 			</svg>
-		</Button>
+		</Button>	
 
 		<div class='mt-5 flex w-full flex-col gap-y-10'>
 			<div>
@@ -98,6 +101,7 @@ const Group1 = [
 				<p>listed in no particular order</p>
 			</div>
 			<LinkSection title='take a glance?' links={Group1} />
+			<LinkSection title='long description moment :P' links={Group2} />
 		</div>
 	</div>
 </PageLayout>
