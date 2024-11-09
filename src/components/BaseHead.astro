@@ -11,7 +11,8 @@ type Props = SiteMeta
 const { description, title } = Astro.props
 
 const titleSeparator = '•'
-const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
+// const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
+const siteTitle = title === 'Home' ? siteConfig.title : `${title} ${titleSeparator} ${siteConfig.title}`
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 // const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url).href
 ---
@@ -28,15 +29,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <link rel='icon' type='image/png' sizes='512x512' href='https://cdn.sunyz.net/favicons/512x512.png' />
 <link rel='apple-touch-icon' sizes='180x180' href='https://cdn.sunyz.net/favicons/apple-touch-icon.png' />
 
-<!-- {/* Font preloads */}
-<link rel='preload' href='https://cdn.sunyz.net/fonts/Satoshi-Variable.woff2' as='font' type='font/ttf' crossorigin />
-<link
-	rel='preload'
-	href='https://cdn.sunyz.net/fonts/Satoshi-VariableItalic.woff2'
-	as='font'
-	type='font/ttf'
-	crossorigin
-/> -->
+{/* Font preloads */}
+<link rel='preload' href='https://cdn.sunyz.net/fonts/Satoshi-Variable.woff2' as='font' type='font/woff2' crossorigin />
+<!-- <link rel='preload' href='https://cdn.sunyz.net/fonts/Satoshi-VariableItalic.woff2' as='font' type='font/woff2' crossorigin/> -->
 
 {/* Canonical URL */}
 <link rel='canonical' href={canonicalURL} />
