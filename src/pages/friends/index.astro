@@ -3,7 +3,20 @@ import PageLayout from '@/layouts/BaseLayout.astro'
 import LinkSection from '@/components/LinkSection.astro'
 import Button from '@/components/Button.astro'
 
-const Group1 = [
+const meta = {
+	description: 'Friends',
+	title: 'Friends'
+}
+
+type friend = {
+    name: string;
+    description: string;
+    href: string;
+    imgPath: string;
+}
+
+// Short
+const groupA = [
 	{
 		name: 'Nanami Nakano',
 		description: 'A few word about you.',
@@ -28,6 +41,10 @@ const Group1 = [
 		href: 'https://jackiecat.top/',
 		imgPath: 'https://cdn.sunyz.net/friends/jackie.webp'
 	},
+]
+
+// Moderate
+const groupB = [
 	{
 		name: 'TaranakiNeko',
 		description: 'A cat lying on the keyboard.',
@@ -54,7 +71,8 @@ const Group1 = [
 	},
 ]
 
-const Group2 = [
+// Long
+const groupC = [
 	{
 		name: 'Souiken',
 		description: 'May we still see the rising sun after enduring this long night.',
@@ -75,9 +93,24 @@ const Group2 = [
 	},
 
 ]
+
+function shuffle(array: friend[]): void {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+shuffle(groupA);
+shuffle(groupB);
+shuffle(groupC);
+
+const randomizedGroup1 = [...groupA, ...groupB];
+const randomizedGroup2 = [...groupC];
+
 ---
 
-<PageLayout meta={{ title: 'Home' }}>
+<PageLayout meta={meta}>
 	<div class='w-full'>
 		<Button title='Back' href='/' style='button'>
 			<svg
@@ -98,10 +131,10 @@ const Group2 = [
 		<div class='mt-5 flex w-full flex-col gap-y-10'>
 			<div>
 				<h1 class='mb-1 text-2xl font-bold'>Friends</h1>
-				<p>listed in no particular order</p>
+				<p>listed in no particular order, randomized.</p>
 			</div>
-			<LinkSection title='take a glance?' links={Group1} />
-			<LinkSection title='long description moment :P' links={Group2} />
+			<LinkSection title='take a glance?' links={randomizedGroup1} />
+			<LinkSection title='long description moment :P' links={randomizedGroup2} />
 		</div>
 	</div>
 </PageLayout>
