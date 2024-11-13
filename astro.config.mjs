@@ -19,6 +19,8 @@ export default defineConfig({
     remotePatterns: [{ protocol: "https" }],
   },
   prefetch: true,
-  output: 'server',
-  adapter: cloudflare()
+  adapter: cloudflare({
+    imageService: 'cloudflare'
+  }),
+  output: 'server'
 });

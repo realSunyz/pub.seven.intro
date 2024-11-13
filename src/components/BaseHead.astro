@@ -10,7 +10,7 @@ type Props = SiteMeta
 
 const { description, title } = Astro.props
 
-const titleSeparator = '•'
+const titleSeparator = '-'
 // const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 const siteTitle = title === 'Home' ? siteConfig.title : `${title} ${titleSeparator} ${siteConfig.title}`
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
@@ -31,7 +31,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 {/* Font preloads */}
 <link rel='preload' href='https://cdn.sunyz.net/fonts/Satoshi-Variable.woff2' as='font' type='font/woff2' crossorigin />
-<link rel='preload' href='https://cdn.sunyz.net/fonts/Satoshi-VariableItalic.woff2' as='font' type='font/woff2' crossorigin/>
 
 {/* Canonical URL */}
 <link rel='canonical' href={canonicalURL} />
@@ -42,7 +41,4 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <meta content={siteConfig.author} name='author' />
 
 {/* Sitemap */}
-<link href='/sitemap-index.xml' rel='sitemap' />
-
-{/* RSS auto-discovery */}
-<link href='/rss.xml' rel='alternate' title={siteConfig.title} type='application/rss+xml' />
+<link rel="sitemap" href="/sitemap-index.xml" />

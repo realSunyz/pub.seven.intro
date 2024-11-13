@@ -7,7 +7,7 @@ export const siteConfig: SiteConfig = {
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: 'it\'s 7 here',
 	// Meta property used as the default description meta property
-	description: 'Everything about Seven (aka. realSunyz).',
+	description: 'Everything about Yanzheng SUN (aka. Seven SUN, realSunyz).',
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: 'en-US',
 	// Meta property, found in src/components/BaseHead.astro L:42
