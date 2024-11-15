@@ -20,7 +20,7 @@ export default defineConfig({
   },
   prefetch: true,
   adapter: cloudflare({
-    imageService: 'cloudflare'
+//    imageService: 'cloudflare'
   }),
   output: 'server'
 });
