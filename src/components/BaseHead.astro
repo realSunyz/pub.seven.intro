@@ -13,7 +13,8 @@ const { description, title } = Astro.props
 
 const titleSeparator = '-'
 // const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
-const siteTitle = title === 'Home' ? siteConfig.title : `${title} ${titleSeparator} ${siteConfig.title}`
+const siteTitle =
+	title === 'Home' ? siteConfig.title : `${title} ${titleSeparator} ${siteConfig.title}`
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 // const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url).href
 ---
@@ -24,19 +25,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <title>{siteTitle}</title>
 
 {/* Icons / Favicon */}
-<link rel="icon" sizes="any" href="https://cdn.sunyz.net/favicons/favicon.ico" />
+<link rel='icon' sizes='any' href='https://cdn.sunyz.net/favicons/favicon.ico' />
 <link rel='icon' type='image/png' sizes='16x16' href='https://cdn.sunyz.net/favicons/16x16.png' />
 <link rel='icon' type='image/png' sizes='32x32' href='https://cdn.sunyz.net/favicons/32x32.png' />
-<link rel='icon' type='image/png' sizes='512x512' href='https://cdn.sunyz.net/favicons/512x512.png' />
-<link rel='apple-touch-icon' sizes='180x180' href='https://cdn.sunyz.net/favicons/apple-touch-icon.png' />
+<link
+	rel='icon'
+	type='image/png'
+	sizes='512x512'
+	href='https://cdn.sunyz.net/favicons/512x512.png'
+/>
+<link
+	rel='apple-touch-icon'
+	sizes='180x180'
+	href='https://cdn.sunyz.net/favicons/apple-touch-icon.png'
+/>
 
-{/* Font preloads
+{
+	/* Font preloads
 <link rel='preload' href='https://cdn.sunyz.net/fonts/Satoshi-Variable.woff2' as='font' type='font/woff2' crossorigin />
-*/}
+*/
+}
 
-{/* DEV
+{
+	/* DEV
 <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-*/}
+*/
+}
 
 {/* Canonical URL */}
 <link rel='canonical' href={canonicalURL} />
@@ -47,7 +61,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <meta content={siteConfig.author} name='author' />
 
 {/* Sitemap */}
-<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel='sitemap' href='/sitemap-index.xml' />
 
 {/* Google Analytics */}
-<GoogleAnalytics id="G-B91DH624MK" />
+<GoogleAnalytics id='G-B91DH624MK' />

@@ -9,10 +9,10 @@ const meta = {
 }
 
 type friend = {
-    name: string;
-    description: string;
-    href: string;
-    imgPath: string;
+	name: string
+	description: string
+	href: string
+	imgPath: string
 }
 
 // Short
@@ -28,7 +28,7 @@ const groupA = [
 		description: 'Bouquet.',
 		href: 'https://lilynet.work/',
 		imgPath: 'https://cdn.sunyz.net/friends/lily.webp'
-	},	
+	},
 	{
 		name: 'Winslow',
 		description: 'Tengu Youkai.',
@@ -37,7 +37,7 @@ const groupA = [
 	},
 	{
 		name: 'Jackie',
-		description: 'A cat\'s nest.',
+		description: "A cat's nest.",
 		href: 'https://jackiecat.top/',
 		imgPath: 'https://cdn.sunyz.net/friends/jackie.webp'
 	},
@@ -46,7 +46,7 @@ const groupA = [
 		description: 'Forever you will be in my heart.',
 		href: 'https://amane.icu/',
 		imgPath: 'https://cdn.sunyz.net/friends/nofated.webp'
-	},
+	}
 ]
 
 // Moderate
@@ -68,7 +68,7 @@ const groupB = [
 		description: 'If you find nothing to create, then create yourself.',
 		href: 'https://0w.al/',
 		imgPath: 'https://cdn.sunyz.net/friends/clansty.webp'
-	},
+	}
 ]
 
 // Long
@@ -87,27 +87,26 @@ const groupC = [
 	},
 	{
 		name: 'SSR',
-		description: 'And one day we\'ll look back at where we started and be amazed by how far we\'ve come.',
+		description:
+			"And one day we'll look back at where we started and be amazed by how far we've come.",
 		href: 'https://leanhe.dev/',
 		imgPath: 'https://cdn.sunyz.net/friends/ssr.webp'
-	},
-
+	}
 ]
 
 function shuffle(array: friend[]): void {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
+	for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1))
+		;[array[i], array[j]] = [array[j], array[i]]
+	}
 }
 
-shuffle(groupA);
-shuffle(groupB);
-shuffle(groupC);
+shuffle(groupA)
+shuffle(groupB)
+shuffle(groupC)
 
-const randomizedGroup1 = [...groupA, ...groupB];
-const randomizedGroup2 = [...groupC];
-
+const randomizedGroup1 = [...groupA, ...groupB]
+const randomizedGroup2 = [...groupC]
 ---
 
 <PageLayout meta={meta}>
@@ -126,7 +125,7 @@ const randomizedGroup2 = [...groupC];
 				>
 				</path>
 			</svg>
-		</Button>	
+		</Button>
 
 		<div class='mt-5 flex w-full flex-col gap-y-10'>
 			<div>
