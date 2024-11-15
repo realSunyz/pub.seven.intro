@@ -1,5 +1,6 @@
 ---
 import { cn } from '@/utils'
+import { Image } from 'astro:assets';
 
 const {
 	as: Tag = 'div',
@@ -31,11 +32,12 @@ const {
 >
 	{
 		imagePath && (
-			<img
+			<Image
 				src={imagePath}
 				alt={altText}
 				class={cn('mb-3 md:absolute md:mb-0', imageClass)}
 				loading='eager'
+				inferSize
 			/>
 		)
 	}
