@@ -1,7 +1,7 @@
 {
 	"name": "pub.seven.intro",
 	"type": "module",
-	"version": "0.0.5",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "astro check --watch & astro dev",
 		"start": "astro dev",
@@ -16,7 +16,7 @@
 		"@astrojs/cloudflare": "^11.2.0",
 		"@astrojs/sitemap": "^3.2.1",
 		"@astrojs/tailwind": "^5.1.2",
-		"astro": "^4.16.7",
+		"astro": "^4.16.16",
 		"astro-expressive-code": "^0.37.0",
 		"astro-google-analytics": "^1.0.3",
 		"astro-icon": "^1.1.0",

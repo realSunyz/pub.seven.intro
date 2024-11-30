@@ -10,7 +10,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sunyz.net',
+  site: 'https://sunyz.dev',
   integrations: [expressiveCode(expressiveCodeOptions), tailwind({
     applyBaseStyles: false
   }), sitemap(), icon()],
