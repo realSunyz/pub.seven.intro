@@ -11,7 +11,8 @@ const {
 	date,
 	imagePath,
 	altText,
-	imageClass
+	imageClass,
+	loadtype
 } = Astro.props
 
 // const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
@@ -36,7 +37,7 @@ const {
 				src={imagePath}
 				alt={altText}
 				class={cn('mb-3 md:absolute md:mb-0', imageClass)}
-				loading='eager'
+				loading={loadtype}
 				inferSize
 			/>
 		)

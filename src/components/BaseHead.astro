@@ -50,9 +50,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <link rel='canonical' href={canonicalURL} />
 
 {/* Primary Meta Tags */}
-<meta content={siteTitle} name='title' />
-<meta content={description} name='description' />
-<meta content={siteConfig.author} name='author' />
+<meta name='title' content={siteTitle} />
+<meta name='description' content={description} />
+<meta name='author' content={siteConfig.author} />
 
 {/* Sitemap */}
 <link rel='sitemap' href='/sitemap-index.xml' />

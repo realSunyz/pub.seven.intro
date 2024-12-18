@@ -3,11 +3,11 @@ import type { AstroExpressiveCodeOptions } from 'astro-expressive-code'
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: 'realSunyz',
+	author: 'Yanzheng Sun',
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: "it's 7 here",
+	title: "it's 7 here | Yanzheng Sun",
 	// Meta property used as the default description meta property
-	description: 'Everything about Yanzheng SUN (aka. Seven SUN, realSunyz).',
+	description: 'This is the personal bio website of Yanzheng SUN (a.k.a. Seven SUN, realSunyz), the owner and operator of AS150289.',
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: 'en-US',
 	// Meta property, found in src/components/BaseHead.astro L:42
