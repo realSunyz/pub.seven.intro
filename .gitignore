@@ -1,8 +1,13 @@
 # build output
-dist/
+dist/*
+
 # generated types
 .astro/
 .vercel/
+
+# Headers
+!dist
+!dist/_headers
 
 # dependencies
 node_modules/
