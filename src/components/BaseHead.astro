@@ -5,7 +5,6 @@ import '../styles/app.css'
 
 import type { SiteMeta } from '@/types'
 import { siteConfig } from '@/site-config'
-import { GoogleAnalytics } from 'astro-google-analytics'
 
 type Props = SiteMeta
 
@@ -56,6 +55,3 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 {/* Sitemap */}
 <link rel='sitemap' href='/sitemap-index.xml' />
-
-{/* Google Analytics */}
-<GoogleAnalytics id='G-B91DH624MK' />

@@ -23,7 +23,7 @@ export default defineConfig({
 		yeskunallumami({
 			domains: ['sunyz.dev'],
 			endpointUrl: 'https://analytics.sunyz.net',
-			id: '960dc1e7-48fe-465b-9d28-513414e6daf7',
+			id: '2f6fcd4d-5697-476d-8bf0-08319e974695',
 		})
 	],
 	image: {

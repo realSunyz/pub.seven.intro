@@ -19,7 +19,6 @@
 		"@yeskunall/astro-umami": "^0.0.4",
 		"astro": "^4.16.16",
 		"astro-expressive-code": "^0.37.0",
-		"astro-google-analytics": "^1.0.3",
 		"astro-icon": "^1.1.0",
 		"clsx": "^2.1.0",
 		"mdast-util-to-string": "^4.0.0",
