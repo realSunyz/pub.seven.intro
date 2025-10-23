@@ -20,11 +20,11 @@ export default defineConfig({
 		}),
 		sitemap(),
 		icon(),
-		yeskunallumami({
-			domains: ['sunyz.dev'],
-			endpointUrl: 'https://analytics.sunyz.net',
-			id: '2f6fcd4d-5697-476d-8bf0-08319e974695',
-		})
+		// yeskunallumami({
+		// 	domains: ['sunyz.dev'],
+		// 	endpointUrl: 'https://analytics.sunyz.net',
+		// 	id: '2f6fcd4d-5697-476d-8bf0-08319e974695',
+		// })
 	],
 	image: {
 		domains: ['cdn.sunyz.net'],
